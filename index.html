@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vivus demo</title>
+    <style type="text/css">
+        svg * {
+            fill: none;
+            stroke: currentColor;
+        }
+        #demoSvg,#logoSvg {
+            width: 100%;
+            margin: 30px auto;
+        }
+        #demoSvg {
+            color: #ffc107;
+        }
+        #logoSvg {
+            color: #FF495F;
+        }
+    </style>
+</head>
+<body>
+    <svg id="demoSvg" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" onclick="vivusDemo.reset().play();">
+        <circle cx="12" cy="12" r="5"/>
+        <line data-async x1="12" y1="1" x2="12" y2="3"/>
+        <line data-async x1="12" y1="21" x2="12" y2="23"/>
+        <line data-async x1="4.2" y1="4.2" x2="5.6" y2="5.6"/>
+        <line data-async x1="18.4" y1="18.4" x2="19.8" y2="19.8"/>
+        <line data-async x1="1" y1="12" x2="3" y2="12"/>
+        <line data-async x1="21" y1="12" x2="23" y2="12"/>
+        <line data-async x1="4.2" y1="19.8" x2="5.6" y2="18.4"/>
+        <line data-async x1="18.4" y1="5.6" x2="19.8" y2="4.2"/>
+    </svg>
+    <svg id="logoSvg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" height="140px" viewBox="0 0 352.2 196.1" fill="none" stroke="#000000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" onclick="vivusLogo.reset().play();">
+        <path data-delay="200" data-duration="30" d="M76.2,191.1H22.9V79l-0.8-10.9c-2.1-4.5-6.5-7.4-11.5-7.3c-0.4,0-0.8,0-1.2,0.1H9.2
+        c-1.7,0.2-3.3-0.6-4-2.1C5,58.2,5,57.7,5,57.1V33.2c0-3,3.3-4.3,5.3-4.8C22.9,23.8,34.1,16.1,42.8,6l0.9-1h32.5L76.2,191.1
+        L76.2,191.1z"/>
+        <path data-delay="30" data-duration="30" d="M167.2,191.1h-53.3V79l-0.8-10.9c-2-4.5-6.5-7.4-11.5-7.3c-0.4,0-0.8,0-1.2,0.1h-0.3
+            c-1.7,0.2-3.3-0.6-4-2.1c-0.2-0.5-0.2-1-0.1-1.5V33.2c0-3,3.3-4.3,5.3-4.8c12.5-4.6,23.7-12.3,32.4-22.4l0.9-1h32.5L167.2,191.1
+            L167.2,191.1z"/>
+        <path data-delay="30" data-duration="30" d="M256.2,191.1h-53.3V79l-0.8-10.9c-2-4.5-6.5-7.4-11.5-7.3c-0.4,0-0.8,0-1.2,0.1h-0.3
+            c-1.7,0.2-3.3-0.6-4-2.1c-0.2-0.5-0.2-1-0.1-1.5V33.2c0-3,3.3-4.3,5.3-4.8c12.5-4.6,23.7-12.3,32.4-22.4l0.9-1h32.5L256.2,191.1
+            L256.2,191.1z"/>
+        <path data-delay="30" data-duration="30" d="M347.2,191.1H294V79l-0.8-10.9c-2-4.5-6.5-7.4-11.5-7.3c-0.4,0-0.8,0-1.2,0.1h-0.3
+            c-1.6,0.2-3.3-0.6-4-2.1c-0.2-0.5-0.2-1-0.1-1.5V33.2c0-3,3.3-4.3,5.3-4.8C294,23.8,305.1,16.1,313.8,6l0.9-1h32.5L347.2,191.1
+            L347.2,191.1z"/>
+    </svg>
+    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js"></script>
+    <script>
+        var vivusDemo = new Vivus('demoSvg', {type: 'oneByOne', duration: 200, animTimingFunction: Vivus.EASE, start: 'autostart', dashGap: 20, forceRender: false}),
+            vivusLogo = new Vivus('logoSvg', {type: 'scenario-sync', duration: 20, start: 'autostart', dashGap: 20, forceRender: false});
+    </script>
+</body>
+</html>
